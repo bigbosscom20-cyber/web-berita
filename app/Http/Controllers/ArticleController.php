@@ -28,7 +28,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string|min:10|max:255',
             'category_id' => 'required|exists:categories,id',
             'content' => 'required|string',
         ]);
@@ -53,7 +53,7 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string|min:10|max:255',
             'category_id' => 'required|exists:categories,id',
             'content' => 'required|string',
         ]);
