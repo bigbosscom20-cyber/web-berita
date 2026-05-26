@@ -29,4 +29,22 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Relasi One-to-One ke Profile
+     * Satu User memiliki satu Profile
+     */
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+    /**
+     * Relasi One-to-Many ke Article
+     * Satu User dapat memiliki banyak Article
+     */
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

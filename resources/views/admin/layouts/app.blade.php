@@ -56,29 +56,36 @@
                 Kelola Konten
             </div>
 
-            <!-- Nav Item: Berita -->
+            <!-- Nav Item: Pengguna -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('users.index') }}">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li>
+
+            <!-- Nav Item: Kategori -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('categories.index') }}">
+                    <i class="fas fa-fw fa-tags"></i>
+                    <span>Kategori</span>
+                </a>
+            </li>
+
+            <!-- Nav Item: Berita (Collapsible) -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBerita"
                     aria-expanded="true" aria-controls="collapseBerita">
                     <i class="fas fa-fw fa-newspaper"></i>
                     <span>Berita</span>
                 </a>
-                <div id="collapseBerita" class="collapse" aria-labelledby="headingBerita"
-                    data-parent="#accordionSidebar">
+                <div id="collapseBerita" class="collapse" aria-labelledby="headingBerita" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu Berita:</h6>
-                        <a class="collapse-item" href="#">Semua Berita</a>
-                        <a class="collapse-item" href="#">Tambah Berita</a>
+                        <a class="collapse-item" href="{{ route('articles.index') }}">Semua Berita</a>
+                        <a class="collapse-item" href="{{ route('articles.create') }}">Tambah Berita</a>
                     </div>
                 </div>
-            </li>
-
-            <!-- Nav Item: Kategori -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-tags"></i>
-                    <span>Kategori</span>
-                </a>
             </li>
 
             <!-- Divider -->
